@@ -1,5 +1,7 @@
 package pocketlog
 
+import "fmt"
+
 type Logger struct {
     threshold Level
 }

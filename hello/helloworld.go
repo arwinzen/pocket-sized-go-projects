@@ -1,9 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"flag"
+	"fmt"
+)
 
 func main() {
-    greeting := greet("en")
+    var lang string 
+    flag.StringVar(&lang, "lang", "en", "The required language, e.g. en, ur...")
+    flag.Parse() 
+
+    // why does greet() work with a string literal 
+    // but not with a variable of type string ? 
+    greeting := greet(language(lang))
     fmt.Println(greeting)
 }
 
