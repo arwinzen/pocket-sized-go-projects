@@ -1,6 +1,8 @@
 package pocketlog_test
 
-import "pocketlog"
+import (
+	"pocketlog"
+)
 
 func ExampleLogger_Debugf() {
     debugLogger := pocketlog.New(pocketlog.LevelDebug)     
